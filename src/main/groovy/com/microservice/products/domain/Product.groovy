@@ -3,13 +3,14 @@ package com.microservice.products.domain
 import javax.persistence.*
 
 @Entity
+@Table(name = "product")
 class Product {
 
-  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Id
   Long id
 
-  @Column(name = "name")
+  @Column(name = "product_name")
   String name
   @Column(name = "price")
   Double price
